@@ -1,0 +1,29 @@
+# Python / Django
+backend/.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/**/migrations/__pycache__/
+backend/staticfiles/
+backend/media/
+backend/db.sqlite3
+*.pyc
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+new-frontend/node_modules/
+new-frontend/.next/
+new-frontend/out/
+
+# Env files
+.env
+backend/.env
+frontend/.env
+frontend/.env.local
+new-frontend/.env
+new-frontend/.env.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
