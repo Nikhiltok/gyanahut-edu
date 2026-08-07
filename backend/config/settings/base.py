@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "django_filters",
     "drf_spectacular",
+    "drf_spectacular_sidecar",
     # local apps
     "apps.core",
     "apps.users",
@@ -133,6 +134,9 @@ SPECTACULAR_SETTINGS = {
     "DESCRIPTION": "Online competitive exam preparation platform API",
     "VERSION": "v1",
     "SERVE_INCLUDE_SCHEMA": False,
+    "SWAGGER_UI_DIST": "SIDECAR",
+    "SWAGGER_UI_FAVICON_HREF": "SIDECAR",
+    "REDOC_DIST": "SIDECAR",
 }
 
 # --- CORS ---
