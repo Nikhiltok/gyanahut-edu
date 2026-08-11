@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
+import { getProfile } from "@/services/auth.service";
 import { getChapters, getExams, getSubjects, getTopics } from "@/services/exam.service";
 import { getPracticeQuota } from "@/services/payments.service";
 import { generatePracticeTest } from "@/services/tests.service";
@@ -32,7 +33,12 @@ export default function InfiniteTestPage() {
   const [questionCount, setQuestionCount] = useState(20);
   const [duration, setDuration] = useState(60);
 
-  const { data: exams } = useQuery({ queryKey: ["exams"], queryFn: () => getExams() });
+  const { data: profile } = useQuery({ queryKey: ["profile"], queryFn: getProfile });
+  const { data: allExams } = useQuery({ queryKey: ["exams"], queryFn: () => getExams() });
+
+  const targetExamIds = new Set((profile?.target_exams ?? []).map((exam) => exam.id));
+  const exams =
+    targetExamIds.size > 0 ? (allExams ?? []).filter((exam) => targetExamIds.has(exam.id)) : allExams;
   const { data: subjects } = useQuery({
     queryKey: ["subjects", examId],
     queryFn: () => getSubjects(examId),
