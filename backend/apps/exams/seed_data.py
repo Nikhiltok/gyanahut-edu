@@ -4035,6 +4035,50 @@ SEED_DATA = [
                             },
                         ],
                     },
+                    {
+                        "name": "Computer Science",
+                        "chapters": [
+                            {
+                                "name": "Fundamentals of Computers",
+                                "topics": [
+                                    "Computer Organization",
+                                    "Input Output Devices",
+                                    "Memory and Storage",
+                                ],
+                            },
+                            {
+                                "name": "Programming Concepts",
+                                "topics": [
+                                    "Programming Languages",
+                                    "Algorithms and Flowcharts",
+                                    "Data Types and Operators",
+                                ],
+                            },
+                            {
+                                "name": "Operating Systems and Software",
+                                "topics": [
+                                    "Operating System Basics",
+                                    "System Software",
+                                    "Application Software",
+                                ],
+                            },
+                            {
+                                "name": "Internet and Networking",
+                                "topics": [
+                                    "Computer Networks",
+                                    "Internet Basics",
+                                    "Cyber Safety",
+                                ],
+                            },
+                            {
+                                "name": "Pedagogy of Computer Science",
+                                "topics": [
+                                    "Teaching Methods for Computer Science",
+                                    "ICT in Education",
+                                ],
+                            },
+                        ],
+                    },
                 ],
             },
             {
