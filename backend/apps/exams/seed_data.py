@@ -4104,6 +4104,13 @@ SEED_DATA = [
                                     "Behaviourism",
                                 ],
                             },
+                            {
+                                "name": "Inclusive Education",
+                                "topics": [
+                                    "Children with Special Needs",
+                                    "Inclusive Classroom Practices",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -4124,6 +4131,13 @@ SEED_DATA = [
                                     "Inference and Tone",
                                 ],
                             },
+                            {
+                                "name": "Pedagogy of Language Development",
+                                "topics": [
+                                    "Language Acquisition",
+                                    "Teaching Methods for Hindi",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -4142,6 +4156,13 @@ SEED_DATA = [
                                 "topics": [
                                     "Passage Based Questions",
                                     "Inference and Tone",
+                                ],
+                            },
+                            {
+                                "name": "Pedagogy of Language Development",
+                                "topics": [
+                                    "Language Acquisition",
+                                    "Teaching Methods for Language",
                                 ],
                             },
                         ],
@@ -4173,6 +4194,20 @@ SEED_DATA = [
                                     "Conversion",
                                 ],
                             },
+                            {
+                                "name": "Data Handling",
+                                "topics": [
+                                    "Tables and Graphs",
+                                    "Pictographs",
+                                ],
+                            },
+                            {
+                                "name": "Pedagogy of Mathematics",
+                                "topics": [
+                                    "Teaching Methods for Mathematics",
+                                    "Problem Solving Approach",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -4186,11 +4221,32 @@ SEED_DATA = [
                                 ],
                             },
                             {
+                                "name": "Food and Health",
+                                "topics": [
+                                    "Sources of Food",
+                                    "Nutrition and Hygiene",
+                                ],
+                            },
+                            {
                                 "name": "Social Studies Basics",
                                 "topics": [
                                     "History Basics",
                                     "Geography Basics",
                                     "Civics Basics",
+                                ],
+                            },
+                            {
+                                "name": "Family and Community",
+                                "topics": [
+                                    "Family Relationships",
+                                    "Local Community and Governance",
+                                ],
+                            },
+                            {
+                                "name": "Pedagogy of EVS",
+                                "topics": [
+                                    "Teaching Methods for EVS",
+                                    "Activity Based Learning",
                                 ],
                             },
                         ],
@@ -4220,6 +4276,13 @@ SEED_DATA = [
                                     "Behaviourism",
                                 ],
                             },
+                            {
+                                "name": "Inclusive Education",
+                                "topics": [
+                                    "Children with Special Needs",
+                                    "Inclusive Classroom Practices",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -4240,6 +4303,13 @@ SEED_DATA = [
                                     "Inference and Tone",
                                 ],
                             },
+                            {
+                                "name": "Pedagogy of Language Development",
+                                "topics": [
+                                    "Language Acquisition",
+                                    "Teaching Methods for Hindi",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -4258,6 +4328,13 @@ SEED_DATA = [
                                 "topics": [
                                     "Passage Based Questions",
                                     "Inference and Tone",
+                                ],
+                            },
+                            {
+                                "name": "Pedagogy of Language Development",
+                                "topics": [
+                                    "Language Acquisition",
+                                    "Teaching Methods for Language",
                                 ],
                             },
                         ],
@@ -4289,6 +4366,20 @@ SEED_DATA = [
                                     "Conversion",
                                 ],
                             },
+                            {
+                                "name": "Data Handling",
+                                "topics": [
+                                    "Tables and Graphs",
+                                    "Pictographs",
+                                ],
+                            },
+                            {
+                                "name": "Pedagogy of Mathematics",
+                                "topics": [
+                                    "Teaching Methods for Mathematics",
+                                    "Problem Solving Approach",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -4302,11 +4393,32 @@ SEED_DATA = [
                                 ],
                             },
                             {
+                                "name": "Food and Health",
+                                "topics": [
+                                    "Sources of Food",
+                                    "Nutrition and Hygiene",
+                                ],
+                            },
+                            {
                                 "name": "Social Studies Basics",
                                 "topics": [
                                     "History Basics",
                                     "Geography Basics",
                                     "Civics Basics",
+                                ],
+                            },
+                            {
+                                "name": "Family and Community",
+                                "topics": [
+                                    "Family Relationships",
+                                    "Local Community and Governance",
+                                ],
+                            },
+                            {
+                                "name": "Pedagogy of EVS",
+                                "topics": [
+                                    "Teaching Methods for EVS",
+                                    "Activity Based Learning",
                                 ],
                             },
                         ],
@@ -8081,6 +8193,55 @@ SEED_DATA = [
                                     "LLP Accounting",
                                 ],
                             },
+                            {
+                                "name": "Amalgamation of Companies",
+                                "topics": [
+                                    "Types of Amalgamation",
+                                    "Purchase Consideration",
+                                    "Accounting Entries in Books of Transferee",
+                                ],
+                            },
+                            {
+                                "name": "Buyback of Securities and Corporate Restructuring",
+                                "topics": [
+                                    "Buyback Conditions and Procedure",
+                                    "Accounting for Buyback",
+                                    "Internal Reconstruction",
+                                    "Capital Reduction",
+                                ],
+                            },
+                            {
+                                "name": "Accounting for Branches",
+                                "topics": [
+                                    "Dependent Branch Accounts",
+                                    "Independent Branch Accounts",
+                                    "Foreign Branch Accounts",
+                                ],
+                            },
+                            {
+                                "name": "Departmental Accounts",
+                                "topics": [
+                                    "Basis of Allocation of Expenses",
+                                    "Inter-Departmental Transfers",
+                                    "Departmental Trading and P&L Account",
+                                ],
+                            },
+                            {
+                                "name": "Consolidated Financial Statements",
+                                "topics": [
+                                    "Preparation of Consolidated Balance Sheet",
+                                    "Minority Interest and Goodwill",
+                                    "Consolidation of Associates",
+                                ],
+                            },
+                            {
+                                "name": "Dissolution of Partnership Firms",
+                                "topics": [
+                                    "Modes of Dissolution",
+                                    "Insolvency of Partners",
+                                    "Piecemeal Distribution",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -8109,17 +8270,80 @@ SEED_DATA = [
                                     "Cheque",
                                 ],
                             },
+                            {
+                                "name": "The Limited Liability Partnership Act 2008",
+                                "topics": [
+                                    "Nature of LLP",
+                                    "Incorporation and Partners",
+                                    "Conversion into LLP",
+                                ],
+                            },
+                            {
+                                "name": "The Foreign Exchange Management Act 1999",
+                                "topics": [
+                                    "Current and Capital Account Transactions",
+                                    "Contravention and Penalties",
+                                ],
+                            },
+                            {
+                                "name": "Interpretation of Statutes",
+                                "topics": [
+                                    "Rules of Interpretation",
+                                    "Aids to Interpretation",
+                                    "Conditions and Warranties",
+                                ],
+                            },
                         ],
                     },
                     {
                         "name": "Taxation",
                         "chapters": [
                             {
+                                "name": "Basic Concepts of Income Tax",
+                                "topics": [
+                                    "Previous Year and Assessment Year",
+                                    "Residential Status and Scope of Total Income",
+                                    "Exempt Income",
+                                ],
+                            },
+                            {
                                 "name": "Income Tax Law",
                                 "topics": [
                                     "Heads of Income",
                                     "Deductions",
                                     "Tax Slabs",
+                                ],
+                            },
+                            {
+                                "name": "Income from Salaries and House Property",
+                                "topics": [
+                                    "Perquisites and Allowances",
+                                    "Annual Value Computation",
+                                    "Deductions from House Property Income",
+                                ],
+                            },
+                            {
+                                "name": "Profits and Gains of Business or Profession",
+                                "topics": [
+                                    "Allowable and Disallowable Expenses",
+                                    "Depreciation under Income Tax",
+                                    "Presumptive Taxation Schemes",
+                                ],
+                            },
+                            {
+                                "name": "Deductions from Gross Total Income",
+                                "topics": [
+                                    "Chapter VI-A Deductions",
+                                    "Deductions for Investments and Insurance",
+                                ],
+                            },
+                            {
+                                "name": "Assessment Procedure and TDS/TCS",
+                                "topics": [
+                                    "Filing of Returns",
+                                    "Tax Deducted at Source",
+                                    "Tax Collected at Source",
+                                    "Advance Tax and Self-Assessment Tax",
                                 ],
                             },
                             {
@@ -8130,17 +8354,56 @@ SEED_DATA = [
                                     "Returns Filing",
                                 ],
                             },
+                            {
+                                "name": "Supply under GST",
+                                "topics": [
+                                    "Meaning and Scope of Supply",
+                                    "Composite and Mixed Supply",
+                                    "Time and Place of Supply",
+                                ],
+                            },
+                            {
+                                "name": "GST Registration and Returns",
+                                "topics": [
+                                    "Registration Procedure",
+                                    "Types of GST Returns",
+                                    "E-Way Bill",
+                                ],
+                            },
+                            {
+                                "name": "Payment of Tax and Value of Supply",
+                                "topics": [
+                                    "Valuation Rules under GST",
+                                    "Reverse Charge Mechanism",
+                                    "Composition Scheme",
+                                ],
+                            },
                         ],
                     },
                     {
                         "name": "Cost and Management Accounting",
                         "chapters": [
                             {
+                                "name": "Introduction to Cost and Management Accounting",
+                                "topics": [
+                                    "Objectives and Scope of Cost Accounting",
+                                    "Cost Sheet Preparation",
+                                    "Cost Classification",
+                                ],
+                            },
+                            {
                                 "name": "Cost Ascertainment",
                                 "topics": [
                                     "Material Costing",
                                     "Labour Costing",
                                     "Overheads",
+                                ],
+                            },
+                            {
+                                "name": "Activity Based Costing",
+                                "topics": [
+                                    "Cost Drivers",
+                                    "ABC vs Traditional Costing",
                                 ],
                             },
                             {
@@ -8152,10 +8415,34 @@ SEED_DATA = [
                                 ],
                             },
                             {
+                                "name": "Marginal Costing and Decision Making",
+                                "topics": [
+                                    "Cost Volume Profit Analysis",
+                                    "Break-Even Analysis",
+                                    "Key Factor Analysis",
+                                ],
+                            },
+                            {
                                 "name": "Standard Costing",
                                 "topics": [
                                     "Variance Analysis",
                                     "Material and Labour Variance",
+                                ],
+                            },
+                            {
+                                "name": "Budget and Budgetary Control",
+                                "topics": [
+                                    "Types of Budgets",
+                                    "Flexible Budgeting",
+                                    "Zero Based Budgeting",
+                                ],
+                            },
+                            {
+                                "name": "Costing for Service and Job Order Industries",
+                                "topics": [
+                                    "Job and Batch Costing",
+                                    "Service Costing",
+                                    "Contract Costing",
                                 ],
                             },
                         ],
@@ -8180,11 +8467,51 @@ SEED_DATA = [
                                 ],
                             },
                             {
+                                "name": "Risk Assessment and Internal Control",
+                                "topics": [
+                                    "Risk Based Audit Approach",
+                                    "Internal Control Components",
+                                    "Materiality in Audit",
+                                ],
+                            },
+                            {
+                                "name": "Audit Evidence and Sampling",
+                                "topics": [
+                                    "Audit Sampling Methods",
+                                    "Analytical Procedures",
+                                    "Test Checking",
+                                ],
+                            },
+                            {
                                 "name": "Company Audit",
                                 "topics": [
                                     "Appointment of Auditor",
                                     "Auditor's Report",
                                     "Auditor's Liability",
+                                ],
+                            },
+                            {
+                                "name": "Audit of Different Types of Entities",
+                                "topics": [
+                                    "Audit of Banks",
+                                    "Audit of Non-Government Organizations",
+                                    "Audit of Cooperative Societies",
+                                ],
+                            },
+                            {
+                                "name": "Audit Report and CARO",
+                                "topics": [
+                                    "Contents of Audit Report",
+                                    "Companies Auditor's Report Order",
+                                    "Reporting under Section 143",
+                                ],
+                            },
+                            {
+                                "name": "Government Audit",
+                                "topics": [
+                                    "Role of Comptroller and Auditor General",
+                                    "Audit of Government Expenditure",
+                                    "Local Bodies Audit",
                                 ],
                             },
                             {
@@ -8225,11 +8552,51 @@ SEED_DATA = [
                                 ],
                             },
                             {
+                                "name": "Financial Analysis and Ratio Analysis",
+                                "topics": [
+                                    "Types of Financial Ratios",
+                                    "Analysis of Financial Statements",
+                                    "Common Size Statements",
+                                ],
+                            },
+                            {
+                                "name": "Cost of Capital and Leverage",
+                                "topics": [
+                                    "Cost of Debt and Equity",
+                                    "Weighted Average Cost of Capital",
+                                    "Operating and Financial Leverage",
+                                ],
+                            },
+                            {
+                                "name": "Capital Structure and Dividend Decisions",
+                                "topics": [
+                                    "Theories of Capital Structure",
+                                    "Dividend Policy",
+                                    "Bonus Shares and Buyback",
+                                ],
+                            },
+                            {
                                 "name": "Strategic Management Concepts",
                                 "topics": [
                                     "SWOT Analysis",
                                     "Business Strategy Levels",
                                     "Strategic Planning",
+                                ],
+                            },
+                            {
+                                "name": "Business Environment and Strategic Analysis",
+                                "topics": [
+                                    "Environmental Scanning",
+                                    "Corporate Level Strategies",
+                                    "Business Level Strategies",
+                                ],
+                            },
+                            {
+                                "name": "Strategy Implementation and Control",
+                                "topics": [
+                                    "Organizational Structure and Strategy",
+                                    "Strategic Control Process",
+                                    "Business Process Reengineering",
                                 ],
                             },
                         ],
@@ -8265,6 +8632,47 @@ SEED_DATA = [
                                     "Parent-Subsidiary Accounting",
                                     "Minority Interest",
                                     "Elimination Entries",
+                                ],
+                            },
+                            {
+                                "name": "Ind AS on Financial Instruments",
+                                "topics": [
+                                    "Classification and Measurement",
+                                    "Ind AS 109 and Ind AS 32",
+                                    "Hedge Accounting",
+                                ],
+                            },
+                            {
+                                "name": "Ind AS on Assets and Revenue Recognition",
+                                "topics": [
+                                    "Property Plant and Equipment (Ind AS 16)",
+                                    "Revenue from Contracts with Customers (Ind AS 115)",
+                                    "Leases (Ind AS 116)",
+                                    "Impairment of Assets",
+                                ],
+                            },
+                            {
+                                "name": "Earnings Per Share and Share Based Payments",
+                                "topics": [
+                                    "Basic and Diluted EPS",
+                                    "Employee Stock Option Plans",
+                                    "Accounting for Share Based Payments",
+                                ],
+                            },
+                            {
+                                "name": "Corporate and Integrated Reporting",
+                                "topics": [
+                                    "Integrated Reporting Framework",
+                                    "Sustainability and ESG Reporting",
+                                    "Value Added Statements",
+                                ],
+                            },
+                            {
+                                "name": "Analysis of Financial Statements",
+                                "topics": [
+                                    "Segment Reporting",
+                                    "Interim Financial Reporting",
+                                    "Accounting for Corporate Restructuring",
                                 ],
                             },
                         ],
@@ -8303,6 +8711,38 @@ SEED_DATA = [
                                     "International Capital Budgeting",
                                 ],
                             },
+                            {
+                                "name": "Mergers, Acquisitions and Corporate Restructuring",
+                                "topics": [
+                                    "Business Valuation for M&A",
+                                    "Financing of Mergers",
+                                    "Takeover Defenses",
+                                ],
+                            },
+                            {
+                                "name": "Interest Rate Risk Management",
+                                "topics": [
+                                    "Forward Rate Agreements",
+                                    "Interest Rate Futures and Swaps",
+                                    "Duration and Immunization",
+                                ],
+                            },
+                            {
+                                "name": "Startup Finance and Business Valuation",
+                                "topics": [
+                                    "Startup Funding Stages",
+                                    "Venture Capital and Private Equity",
+                                    "Valuation of Startups",
+                                ],
+                            },
+                            {
+                                "name": "Mutual Funds and Risk Management",
+                                "topics": [
+                                    "Mutual Fund Structures and NAV",
+                                    "Value at Risk",
+                                    "Corporate Risk Management",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -8332,6 +8772,44 @@ SEED_DATA = [
                                     "SA 700 Series",
                                 ],
                             },
+                            {
+                                "name": "Audit Planning, Strategy and Quality Control",
+                                "topics": [
+                                    "Standards on Quality Control",
+                                    "Audit Strategy and Programme",
+                                    "Materiality and Risk Assessment",
+                                ],
+                            },
+                            {
+                                "name": "Audit of Consolidated Financial Statements",
+                                "topics": [
+                                    "Audit Considerations for Group Audits",
+                                    "Component Auditor Reliance",
+                                ],
+                            },
+                            {
+                                "name": "Due Diligence, Investigation and Forensic Audit",
+                                "topics": [
+                                    "Due Diligence Review",
+                                    "Investigation Procedures",
+                                    "Forensic Audit Techniques",
+                                ],
+                            },
+                            {
+                                "name": "Peer Review and Quality Review",
+                                "topics": [
+                                    "Peer Review Process",
+                                    "Quality Review Board",
+                                ],
+                            },
+                            {
+                                "name": "Audit under Fiscal Laws and Certification",
+                                "topics": [
+                                    "Tax Audit under Income Tax Act",
+                                    "GST Audit and Certification",
+                                    "Audit Reports and Certificates",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -8357,6 +8835,55 @@ SEED_DATA = [
                                 "topics": [
                                     "Arm's Length Price",
                                     "Methods of Transfer Pricing",
+                                ],
+                            },
+                            {
+                                "name": "Taxation of Business Restructuring",
+                                "topics": [
+                                    "Tax Aspects of Amalgamation",
+                                    "Tax Aspects of Demerger",
+                                    "Slump Sale Taxation",
+                                ],
+                            },
+                            {
+                                "name": "Assessment of Various Entities",
+                                "topics": [
+                                    "Assessment of Firms and LLPs",
+                                    "Assessment of Trusts",
+                                    "Assessment of AOP/BOI",
+                                ],
+                            },
+                            {
+                                "name": "Tax Deducted and Collected at Source",
+                                "topics": [
+                                    "TDS on Specified Payments",
+                                    "TCS Provisions",
+                                    "Advance Tax and Interest Provisions",
+                                ],
+                            },
+                            {
+                                "name": "Assessment Procedure, Appeals and Dispute Resolution",
+                                "topics": [
+                                    "Return Filing and Assessment",
+                                    "Appeals and Revisions",
+                                    "Dispute Resolution Panel",
+                                    "Advance Rulings",
+                                ],
+                            },
+                            {
+                                "name": "Double Taxation Relief and Non-Resident Taxation",
+                                "topics": [
+                                    "DTAA Provisions",
+                                    "Taxation of Non-Residents",
+                                    "Equalisation Levy",
+                                ],
+                            },
+                            {
+                                "name": "General Anti-Avoidance Rules and BEPS",
+                                "topics": [
+                                    "GAAR Provisions",
+                                    "Base Erosion and Profit Shifting",
+                                    "Country-by-Country Reporting",
                                 ],
                             },
                         ],
@@ -8388,6 +8915,38 @@ SEED_DATA = [
                                     "EXIM Policy",
                                 ],
                             },
+                            {
+                                "name": "GST Audit and Annual Return",
+                                "topics": [
+                                    "GST Audit Applicability",
+                                    "Reconciliation Statement",
+                                    "Annual Return Filing",
+                                ],
+                            },
+                            {
+                                "name": "Advance Ruling and Anti-Profiteering",
+                                "topics": [
+                                    "Advance Ruling Mechanism under GST",
+                                    "Anti-Profiteering Provisions",
+                                    "National Anti-Profiteering Authority",
+                                ],
+                            },
+                            {
+                                "name": "Demand, Recovery and Appeals under GST",
+                                "topics": [
+                                    "Demand and Recovery Provisions",
+                                    "Appellate Mechanism",
+                                    "Offences and Penalties",
+                                ],
+                            },
+                            {
+                                "name": "Customs Valuation and Baggage Rules",
+                                "topics": [
+                                    "Customs Valuation Methods",
+                                    "Baggage and Duty Drawback",
+                                    "Warehousing under Customs",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -8398,6 +8957,20 @@ SEED_DATA = [
                                 "topics": [
                                     "Integrated Business Scenarios",
                                     "Cross-Functional Problem Solving",
+                                ],
+                            },
+                            {
+                                "name": "Financial and Strategic Decision Case Studies",
+                                "topics": [
+                                    "Financial Reporting and Audit Integration Cases",
+                                    "Financial Management and Strategy Cases",
+                                ],
+                            },
+                            {
+                                "name": "Taxation and Regulatory Case Studies",
+                                "topics": [
+                                    "Direct and Indirect Tax Integrated Cases",
+                                    "Corporate Law and Compliance Cases",
                                 ],
                             },
                         ],
