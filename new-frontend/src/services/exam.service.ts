@@ -1,10 +1,13 @@
-import type { Chapter, Exam, ExamCategory, PaginatedResponse, Subject, Topic } from "@/types/exam";
+import type { Chapter, Exam, ExamCategory, Subject, Topic } from "@/types/exam";
 
 import { api } from "./api";
 
+// The category/exam/subject/chapter/topic public endpoints feed dropdown
+// selectors and are unpaginated on the backend — they return a plain array.
+
 export async function getCategories() {
-  const { data } = await api.get<PaginatedResponse<ExamCategory>>("/categories/");
-  return data.results;
+  const { data } = await api.get<ExamCategory[]>("/categories/");
+  return data;
 }
 
 export async function getCategory(slug: string) {
@@ -13,8 +16,8 @@ export async function getCategory(slug: string) {
 }
 
 export async function getExams(params?: { category?: string }) {
-  const { data } = await api.get<PaginatedResponse<Exam>>("/exams/", { params });
-  return data.results;
+  const { data } = await api.get<Exam[]>("/exams/", { params });
+  return data;
 }
 
 export async function getExam(slug: string) {
@@ -23,8 +26,8 @@ export async function getExam(slug: string) {
 }
 
 export async function getSubjects(examId: string) {
-  const { data } = await api.get<PaginatedResponse<Subject>>("/subjects/", { params: { exam: examId } });
-  return data.results;
+  const { data } = await api.get<Subject[]>("/subjects/", { params: { exam: examId } });
+  return data;
 }
 
 export async function getSubject(id: string) {
@@ -33,8 +36,8 @@ export async function getSubject(id: string) {
 }
 
 export async function getChapters(subjectId: string) {
-  const { data } = await api.get<PaginatedResponse<Chapter>>("/chapters/", { params: { subject: subjectId } });
-  return data.results;
+  const { data } = await api.get<Chapter[]>("/chapters/", { params: { subject: subjectId } });
+  return data;
 }
 
 export async function getChapter(id: string) {
@@ -43,6 +46,6 @@ export async function getChapter(id: string) {
 }
 
 export async function getTopics(chapterId: string) {
-  const { data } = await api.get<PaginatedResponse<Topic>>("/topics/", { params: { chapter: chapterId } });
-  return data.results;
+  const { data } = await api.get<Topic[]>("/topics/", { params: { chapter: chapterId } });
+  return data;
 }
