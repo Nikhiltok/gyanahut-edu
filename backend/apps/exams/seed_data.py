@@ -66,6 +66,38 @@ SEED_DATA = [
                                     "Polygon",
                                 ],
                             },
+                            {
+                                "name": "Mensuration",
+                                "topics": [
+                                    "Area and Perimeter",
+                                    "Volume and Surface Area",
+                                    "Cylinder Cone Sphere",
+                                ],
+                            },
+                            {
+                                "name": "Trigonometry",
+                                "topics": [
+                                    "Trigonometric Ratios",
+                                    "Trigonometric Identities",
+                                    "Heights and Distances",
+                                ],
+                            },
+                            {
+                                "name": "Data Interpretation",
+                                "topics": [
+                                    "Tables",
+                                    "Bar Graphs",
+                                    "Pie Charts",
+                                    "Line Graphs",
+                                ],
+                            },
+                            {
+                                "name": "Statistics",
+                                "topics": [
+                                    "Mean Median Mode",
+                                    "Data Handling",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -102,6 +134,38 @@ SEED_DATA = [
                                     "Relation Based Questions",
                                 ],
                             },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
+                                    "Number Classification",
+                                ],
+                            },
+                            {
+                                "name": "Non-Verbal Reasoning",
+                                "topics": [
+                                    "Mirror Images",
+                                    "Water Images",
+                                    "Paper Folding",
+                                    "Embedded Figures",
+                                ],
+                            },
+                            {
+                                "name": "Direction Sense",
+                                "topics": [
+                                    "Distance and Direction",
+                                    "Shadow Based Problems",
+                                ],
+                            },
+                            {
+                                "name": "Puzzle",
+                                "topics": [
+                                    "Seating Arrangement",
+                                    "Box Puzzle",
+                                    "Floor Puzzle",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -126,6 +190,41 @@ SEED_DATA = [
                                     "Antonyms",
                                     "One Word Substitution",
                                     "Idioms",
+                                ],
+                            },
+                            {
+                                "name": "Idioms and Phrases",
+                                "topics": [
+                                    "Common Idioms",
+                                    "Phrasal Verbs",
+                                ],
+                            },
+                            {
+                                "name": "Error Spotting",
+                                "topics": [
+                                    "Grammatical Errors",
+                                    "Spotting Errors in Sentences",
+                                ],
+                            },
+                            {
+                                "name": "Sentence Improvement",
+                                "topics": [
+                                    "Sentence Correction",
+                                    "Sentence Rearrangement",
+                                ],
+                            },
+                            {
+                                "name": "Reading Comprehension",
+                                "topics": [
+                                    "Passage Analysis",
+                                    "Inference Questions",
+                                ],
+                            },
+                            {
+                                "name": "Cloze Test",
+                                "topics": [
+                                    "Vocabulary Based Cloze",
+                                    "Grammar Based Cloze",
                                 ],
                             },
                         ],
@@ -168,6 +267,31 @@ SEED_DATA = [
                                     "Inflation",
                                     "Budget",
                                     "GDP",
+                                ],
+                            },
+                            {
+                                "name": "Science",
+                                "topics": [
+                                    "Physics",
+                                    "Chemistry",
+                                    "Biology",
+                                ],
+                            },
+                            {
+                                "name": "Current Affairs",
+                                "topics": [
+                                    "National Affairs",
+                                    "International Affairs",
+                                    "Sports and Awards",
+                                ],
+                            },
+                            {
+                                "name": "Static GK",
+                                "topics": [
+                                    "National Symbols",
+                                    "Important Days",
+                                    "Books and Authors",
+                                    "Awards and Honours",
                                 ],
                             },
                         ],
@@ -221,6 +345,20 @@ SEED_DATA = [
                                     "Paper Folding",
                                 ],
                             },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Direction Sense",
+                                "topics": [
+                                    "Distance and Direction",
+                                    "Shadow Based Problems",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -267,12 +405,26 @@ SEED_DATA = [
                                 ],
                             },
                             {
+                                "name": "Trigonometry",
+                                "topics": [
+                                    "Trigonometric Ratios",
+                                    "Heights and Distances",
+                                ],
+                            },
+                            {
                                 "name": "Data Interpretation",
                                 "topics": [
                                     "Tables",
                                     "Bar Graphs",
                                     "Pie Charts",
                                     "Line Graphs",
+                                ],
+                            },
+                            {
+                                "name": "Statistics",
+                                "topics": [
+                                    "Mean Median Mode",
+                                    "Data Handling",
                                 ],
                             },
                         ],
@@ -451,6 +603,21 @@ SEED_DATA = [
                                     "Combined Work",
                                 ],
                             },
+                            {
+                                "name": "Geometry",
+                                "topics": [
+                                    "Lines and Angles",
+                                    "Triangles",
+                                    "Circles",
+                                ],
+                            },
+                            {
+                                "name": "Mensuration",
+                                "topics": [
+                                    "Area and Perimeter",
+                                    "Volume and Surface Area",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -532,6 +699,14 @@ SEED_DATA = [
                                     "Biology",
                                 ],
                             },
+                            {
+                                "name": "Static GK",
+                                "topics": [
+                                    "National Symbols",
+                                    "Important Days",
+                                    "Books and Authors",
+                                ],
+                            },
                         ],
                     },
                 ],
@@ -573,6 +748,14 @@ SEED_DATA = [
                                     "Family Tree",
                                     "Coded Relation",
                                     "Generation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
+                                    "Number Classification",
                                 ],
                             },
                         ],
@@ -674,6 +857,13 @@ SEED_DATA = [
                                     "Heights and Distances",
                                 ],
                             },
+                            {
+                                "name": "Mensuration",
+                                "topics": [
+                                    "Area and Perimeter",
+                                    "Volume and Surface Area",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -701,6 +891,20 @@ SEED_DATA = [
                                     "Passage Analysis",
                                     "Inference Questions",
                                     "Vocabulary in Context",
+                                ],
+                            },
+                            {
+                                "name": "Error Spotting",
+                                "topics": [
+                                    "Grammatical Errors",
+                                    "Spotting Errors in Sentences",
+                                ],
+                            },
+                            {
+                                "name": "Cloze Test",
+                                "topics": [
+                                    "Vocabulary Based Cloze",
+                                    "Grammar Based Cloze",
                                 ],
                             },
                         ],
@@ -736,6 +940,20 @@ SEED_DATA = [
                                     "Letter Coding",
                                     "Number Coding",
                                     "Symbol Coding",
+                                ],
+                            },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
                                 ],
                             },
                         ],
@@ -960,6 +1178,20 @@ SEED_DATA = [
                                     "Symbol Coding",
                                 ],
                             },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -1034,6 +1266,13 @@ SEED_DATA = [
                                     "Vocabulary in Context",
                                 ],
                             },
+                            {
+                                "name": "Cloze Test",
+                                "topics": [
+                                    "Vocabulary Based Cloze",
+                                    "Grammar Based Cloze",
+                                ],
+                            },
                         ],
                     },
                 ],
@@ -1075,6 +1314,13 @@ SEED_DATA = [
                                     "Family Tree",
                                     "Coded Relation",
                                     "Generation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
                                 ],
                             },
                         ],
@@ -1167,6 +1413,13 @@ SEED_DATA = [
                                     "Volume and Surface Area",
                                 ],
                             },
+                            {
+                                "name": "Trigonometry",
+                                "topics": [
+                                    "Trigonometric Ratios",
+                                    "Heights and Distances",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -1178,6 +1431,14 @@ SEED_DATA = [
                                     "Parts of Speech",
                                     "Tenses",
                                     "Sentence Structure",
+                                ],
+                            },
+                            {
+                                "name": "Vocabulary",
+                                "topics": [
+                                    "Synonyms",
+                                    "Antonyms",
+                                    "One Word Substitution",
                                 ],
                             },
                             {
@@ -1318,6 +1579,13 @@ SEED_DATA = [
                                     "Number Classification",
                                 ],
                             },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -1356,6 +1624,20 @@ SEED_DATA = [
                                     "Circles",
                                 ],
                             },
+                            {
+                                "name": "Mensuration",
+                                "topics": [
+                                    "Area and Perimeter",
+                                    "Volume and Surface Area",
+                                ],
+                            },
+                            {
+                                "name": "Trigonometry",
+                                "topics": [
+                                    "Trigonometric Ratios",
+                                    "Heights and Distances",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -1383,6 +1665,13 @@ SEED_DATA = [
                                     "Passage Analysis",
                                     "Inference Questions",
                                     "Vocabulary in Context",
+                                ],
+                            },
+                            {
+                                "name": "Cloze Test",
+                                "topics": [
+                                    "Vocabulary Based Cloze",
+                                    "Grammar Based Cloze",
                                 ],
                             },
                         ],
@@ -1428,6 +1717,14 @@ SEED_DATA = [
                                     "National Affairs",
                                     "International Affairs",
                                     "Sports and Awards",
+                                ],
+                            },
+                            {
+                                "name": "Static GK",
+                                "topics": [
+                                    "National Symbols",
+                                    "Important Days",
+                                    "Books and Authors",
                                 ],
                             },
                         ],
@@ -1486,6 +1783,13 @@ SEED_DATA = [
                                     "Line Graphs",
                                 ],
                             },
+                            {
+                                "name": "Data Sufficiency",
+                                "topics": [
+                                    "Two Statement Analysis",
+                                    "Additional Data Requirement",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -1508,6 +1812,13 @@ SEED_DATA = [
                                 ],
                             },
                             {
+                                "name": "Syllogism",
+                                "topics": [
+                                    "Categorical Syllogism",
+                                    "Venn Diagram Method",
+                                ],
+                            },
+                            {
                                 "name": "Blood Relation",
                                 "topics": [
                                     "Family Tree",
@@ -1521,6 +1832,13 @@ SEED_DATA = [
                                     "Letter Coding",
                                     "Number Coding",
                                     "Symbol Coding",
+                                ],
+                            },
+                            {
+                                "name": "Inequality",
+                                "topics": [
+                                    "Coded Inequality",
+                                    "Direct Inequality",
                                 ],
                             },
                         ],
@@ -1777,6 +2095,13 @@ SEED_DATA = [
                                     "Successive Profit Loss",
                                 ],
                             },
+                            {
+                                "name": "Data Sufficiency",
+                                "topics": [
+                                    "Two Statement Analysis",
+                                    "Additional Data Requirement",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -1925,6 +2250,13 @@ SEED_DATA = [
                                     "Family Tree",
                                     "Coded Relation",
                                     "Generation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Inequality",
+                                "topics": [
+                                    "Coded Inequality",
+                                    "Direct Inequality",
                                 ],
                             },
                         ],
@@ -2102,6 +2434,21 @@ SEED_DATA = [
                                     "Symbol Coding",
                                 ],
                             },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Coded Relation",
+                                    "Generation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Inequality",
+                                "topics": [
+                                    "Coded Inequality",
+                                    "Direct Inequality",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -2137,6 +2484,13 @@ SEED_DATA = [
                                     "Basic Percentage",
                                     "Percentage Change",
                                     "Applications",
+                                ],
+                            },
+                            {
+                                "name": "Data Sufficiency",
+                                "topics": [
+                                    "Two Statement Analysis",
+                                    "Additional Data Requirement",
                                 ],
                             },
                         ],
@@ -2237,6 +2591,21 @@ SEED_DATA = [
                                     "Generation Based Questions",
                                 ],
                             },
+                            {
+                                "name": "Coding Decoding",
+                                "topics": [
+                                    "Letter Coding",
+                                    "Number Coding",
+                                    "Symbol Coding",
+                                ],
+                            },
+                            {
+                                "name": "Inequality",
+                                "topics": [
+                                    "Coded Inequality",
+                                    "Direct Inequality",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -2272,6 +2641,13 @@ SEED_DATA = [
                                     "Roots of Equation",
                                     "Nature of Roots",
                                     "Formation of Equation",
+                                ],
+                            },
+                            {
+                                "name": "Data Sufficiency",
+                                "topics": [
+                                    "Two Statement Analysis",
+                                    "Additional Data Requirement",
                                 ],
                             },
                         ],
@@ -2549,6 +2925,29 @@ SEED_DATA = [
                                     "Venn Diagram Method",
                                 ],
                             },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Coded Relation",
+                                    "Generation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Coding Decoding",
+                                "topics": [
+                                    "Letter Coding",
+                                    "Number Coding",
+                                    "Symbol Coding",
+                                ],
+                            },
+                            {
+                                "name": "Inequality",
+                                "topics": [
+                                    "Coded Inequality",
+                                    "Direct Inequality",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -2596,6 +2995,13 @@ SEED_DATA = [
                                 "topics": [
                                     "Missing Number Series",
                                     "Wrong Number Series",
+                                ],
+                            },
+                            {
+                                "name": "Data Sufficiency",
+                                "topics": [
+                                    "Two Statement Analysis",
+                                    "Additional Data Requirement",
                                 ],
                             },
                         ],
@@ -2718,6 +3124,14 @@ SEED_DATA = [
                                     "Indus Valley Civilization",
                                     "Vedic Period",
                                     "Maurya Empire",
+                                ],
+                            },
+                            {
+                                "name": "Medieval History",
+                                "topics": [
+                                    "Delhi Sultanate",
+                                    "Mughal Empire",
+                                    "Bhakti and Sufi Movements",
                                 ],
                             },
                             {
@@ -4149,6 +4563,20 @@ SEED_DATA = [
                                     "Distance and Direction",
                                 ],
                             },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -4319,6 +4747,20 @@ SEED_DATA = [
                                     "Word Formation",
                                 ],
                             },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -4456,6 +4898,20 @@ SEED_DATA = [
                                     "Letter Coding",
                                     "Number Coding",
                                     "Symbol Coding",
+                                ],
+                            },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
                                 ],
                             },
                         ],
@@ -4615,6 +5071,20 @@ SEED_DATA = [
                                     "Letter Coding",
                                     "Number Coding",
                                     "Symbol Coding",
+                                ],
+                            },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
                                 ],
                             },
                         ],
@@ -5076,6 +5546,20 @@ SEED_DATA = [
                                     "Pattern Completion",
                                 ],
                             },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
+                                ],
+                            },
                         ],
                     },
                 ],
@@ -5213,6 +5697,20 @@ SEED_DATA = [
                                     "Letter Coding",
                                     "Number Coding",
                                     "Symbol Coding",
+                                ],
+                            },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
                                 ],
                             },
                         ],
@@ -5584,6 +6082,20 @@ SEED_DATA = [
                                     "Mixed Series",
                                 ],
                             },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
+                                ],
+                            },
                         ],
                     },
                 ],
@@ -5828,6 +6340,20 @@ SEED_DATA = [
                                     "Symbol Coding",
                                 ],
                             },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
+                                ],
+                            },
                         ],
                     },
                 ],
@@ -6060,6 +6586,20 @@ SEED_DATA = [
                                     "Letter Coding",
                                     "Number Coding",
                                     "Symbol Coding",
+                                ],
+                            },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
                                 ],
                             },
                         ],
@@ -6301,6 +6841,20 @@ SEED_DATA = [
                                     "Letter Coding",
                                     "Number Coding",
                                     "Symbol Coding",
+                                ],
+                            },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
                                 ],
                             },
                         ],
@@ -6550,6 +7104,20 @@ SEED_DATA = [
                                     "Symbol Coding",
                                 ],
                             },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -6789,6 +7357,20 @@ SEED_DATA = [
                                     "Symbol Coding",
                                 ],
                             },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -6808,6 +7390,20 @@ SEED_DATA = [
                                     "Series",
                                     "Mirror Images",
                                     "Paper Folding",
+                                ],
+                            },
+                            {
+                                "name": "Blood Relation",
+                                "topics": [
+                                    "Family Tree",
+                                    "Relation Based Questions",
+                                ],
+                            },
+                            {
+                                "name": "Classification",
+                                "topics": [
+                                    "Odd One Out",
+                                    "Word Classification",
                                 ],
                             },
                         ],
@@ -7055,6 +7651,30 @@ SEED_DATA = [
                                     "Electromagnetism",
                                 ],
                             },
+                            {
+                                "name": "Thermodynamics",
+                                "topics": [
+                                    "Laws of Thermodynamics",
+                                    "Heat Transfer",
+                                    "Kinetic Theory of Gases",
+                                ],
+                            },
+                            {
+                                "name": "Modern Physics",
+                                "topics": [
+                                    "Dual Nature of Matter",
+                                    "Atoms and Nuclei",
+                                    "Semiconductor Electronics",
+                                ],
+                            },
+                            {
+                                "name": "Waves and Oscillations",
+                                "topics": [
+                                    "Simple Harmonic Motion",
+                                    "Wave Motion",
+                                    "Sound Waves",
+                                ],
+                            },
                         ],
                     },
                     {
@@ -7074,6 +7694,15 @@ SEED_DATA = [
                                     "Atomic Structure",
                                     "Chemical Kinetics",
                                     "Thermodynamics",
+                                ],
+                            },
+                            {
+                                "name": "Inorganic Chemistry",
+                                "topics": [
+                                    "Periodic Table and Periodicity",
+                                    "Chemical Bonding",
+                                    "Coordination Compounds",
+                                    "p-Block and d-Block Elements",
                                 ],
                             },
                         ],
