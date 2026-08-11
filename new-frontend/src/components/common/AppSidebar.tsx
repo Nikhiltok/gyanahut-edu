@@ -71,6 +71,7 @@ export function AppSidebar({ targetExamsLabel }: { targetExamsLabel?: string }) 
       <div className="mt-auto space-y-0.5 border-t border-white/15 px-0 pt-3">
         <NavItem label="Wallet" href="/dashboard/wallet" />
         <NavItem label="Profile" href="/dashboard/profile" />
+        <NavItem label="Settings" href="/dashboard/settings" />
         <button
           type="button"
           onClick={handleLogout}

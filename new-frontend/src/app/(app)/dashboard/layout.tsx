@@ -21,6 +21,7 @@ const PAGE_TITLES: Record<string, string> = {
   "/dashboard/profile": "Profile",
   "/dashboard/wallet": "Wallet",
   "/dashboard/recharge": "Recharge",
+  "/dashboard/settings": "Settings",
 };
 
 const PAGE_TITLE_PREFIXES: [string, string][] = [["/dashboard/result/", "Test result"]];
