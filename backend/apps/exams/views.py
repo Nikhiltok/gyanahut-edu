@@ -12,6 +12,7 @@ class ExamCategoryPublicViewSet(ParentFilteredReadOnlyViewSet):
     queryset = ExamCategory.objects.filter(is_active=True, status=True)
     serializer_class = ExamCategorySerializer
     lookup_field = "slug"
+    pagination_class = None
 
 
 class ExamPublicViewSet(ParentFilteredReadOnlyViewSet):
@@ -20,6 +21,7 @@ class ExamPublicViewSet(ParentFilteredReadOnlyViewSet):
     lookup_field = "slug"
     filter_param = "category"
     filter_field = "category__slug"
+    pagination_class = None
 
 
 class SubjectPublicViewSet(ParentFilteredReadOnlyViewSet):
@@ -27,6 +29,7 @@ class SubjectPublicViewSet(ParentFilteredReadOnlyViewSet):
     serializer_class = SubjectSerializer
     filter_param = "exam"
     filter_field = "exam_id"
+    pagination_class = None
 
 
 class ChapterPublicViewSet(ParentFilteredReadOnlyViewSet):
@@ -34,6 +37,7 @@ class ChapterPublicViewSet(ParentFilteredReadOnlyViewSet):
     serializer_class = ChapterSerializer
     filter_param = "subject"
     filter_field = "subject_id"
+    pagination_class = None
 
 
 class TopicPublicViewSet(ParentFilteredReadOnlyViewSet):
@@ -41,6 +45,7 @@ class TopicPublicViewSet(ParentFilteredReadOnlyViewSet):
     serializer_class = TopicSerializer
     filter_param = "chapter"
     filter_field = "chapter_id"
+    pagination_class = None
 
 
 # --- Admin CRUD endpoints ---
