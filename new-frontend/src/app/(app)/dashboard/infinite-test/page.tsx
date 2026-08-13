@@ -2,8 +2,9 @@
 
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
+import { useSelector } from "react-redux";
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -15,6 +16,7 @@ import { getPracticeQuota } from "@/services/payments.service";
 import { generatePracticeTest } from "@/services/tests.service";
 import { getErrorMessage } from "@/lib/api-error";
 import { cn } from "@/lib/utils";
+import type { RootState } from "@/store";
 
 const QUESTION_COUNTS = [10, 20, 50, 100];
 
@@ -26,6 +28,7 @@ const INFO_CARDS = [
 
 export default function InfiniteTestPage() {
   const router = useRouter();
+  const selectedExamIds = useSelector((state: RootState) => state.examFilter.selectedExamIds);
   const [examId, setExamId] = useState("");
   const [subjectId, setSubjectId] = useState("");
   const [chapterId, setChapterId] = useState("");
@@ -36,9 +39,31 @@ export default function InfiniteTestPage() {
   const { data: profile } = useQuery({ queryKey: ["profile"], queryFn: getProfile });
   const { data: allExams } = useQuery({ queryKey: ["exams"], queryFn: () => getExams() });
 
+  // The header's exam filter (selectedExamIds) takes precedence when set —
+  // it's an explicit, session-wide narrowing the student just made. When the
+  // header filter is empty, fall back to the profile's target_exams-based
+  // scoping (added previously), and when neither is set, show every exam.
   const targetExamIds = new Set((profile?.target_exams ?? []).map((exam) => exam.id));
   const exams =
-    targetExamIds.size > 0 ? (allExams ?? []).filter((exam) => targetExamIds.has(exam.id)) : allExams;
+    selectedExamIds.length > 0
+      ? (allExams ?? []).filter((exam) => selectedExamIds.includes(exam.id))
+      : targetExamIds.size > 0
+        ? (allExams ?? []).filter((exam) => targetExamIds.has(exam.id))
+        : allExams;
+
+  // If the header filter changes and the currently picked exam falls outside
+  // the now-available options, clear the selection (and everything scoped
+  // beneath it) rather than silently submitting a stale/hidden exam.
+  useEffect(() => {
+    if (examId && exams && !exams.some((exam) => exam.id === examId)) {
+      setExamId("");
+      setSubjectId("");
+      setChapterId("");
+      setTopicId("");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [exams]);
+
   const { data: subjects } = useQuery({
     queryKey: ["subjects", examId],
     queryFn: () => getSubjects(examId),

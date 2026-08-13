@@ -9,6 +9,7 @@ from rest_framework.views import APIView
 from apps.attempts.models import StudentAnswer, TestAttempt
 from apps.core.permissions import IsAdminOrSuperAdmin
 from apps.core.responses import success_response
+from apps.core.utils import get_exam_ids_filter
 from apps.payments.models import Order
 from apps.questions.models import Question
 from apps.tests.models import Test
@@ -22,14 +23,19 @@ class StudentDashboardView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
+        exam_ids = get_exam_ids_filter(request)
+
         attempts = TestAttempt.objects.filter(student=request.user, submitted_at__isnull=False)
+        if exam_ids:
+            attempts = attempts.filter(test__exam_id__in=exam_ids)
         aggregate = attempts.aggregate(avg_score=Avg("score"), avg_accuracy=Avg("accuracy"))
 
+        topic_answers = StudentAnswer.objects.filter(attempt__student=request.user)
+        if exam_ids:
+            topic_answers = topic_answers.filter(attempt__test__exam_id__in=exam_ids)
         topic_accuracy = {}
         for row in (
-            StudentAnswer.objects.filter(attempt__student=request.user)
-            .select_related("question__topic")
-            .values("question__topic__name", "is_correct")
+            topic_answers.select_related("question__topic").values("question__topic__name", "is_correct")
         ):
             name = row["question__topic__name"]
             bucket = topic_accuracy.setdefault(name, {"total": 0, "correct": 0})
@@ -57,12 +63,12 @@ class StudentDashboardView(APIView):
             day_streak += 1
             cursor -= timedelta(days=1)
 
-        in_progress = (
-            TestAttempt.objects.filter(student=request.user, submitted_at__isnull=True, is_active=True)
-            .select_related("test", "test__exam")
-            .order_by("-updated_at")
-            .first()
+        in_progress_qs = TestAttempt.objects.filter(
+            student=request.user, submitted_at__isnull=True, is_active=True
         )
+        if exam_ids:
+            in_progress_qs = in_progress_qs.filter(test__exam_id__in=exam_ids)
+        in_progress = in_progress_qs.select_related("test", "test__exam").order_by("-updated_at").first()
         in_progress_attempt = (
             {
                 "attempt_id": str(in_progress.id),
@@ -94,11 +100,11 @@ class PerformanceGraphView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        attempts = (
-            TestAttempt.objects.filter(student=request.user, submitted_at__isnull=False)
-            .order_by("submitted_at")
-            .values("submitted_at", "score", "accuracy")
-        )
+        exam_ids = get_exam_ids_filter(request)
+        attempts = TestAttempt.objects.filter(student=request.user, submitted_at__isnull=False)
+        if exam_ids:
+            attempts = attempts.filter(test__exam_id__in=exam_ids)
+        attempts = attempts.order_by("submitted_at").values("submitted_at", "score", "accuracy")
         return success_response(
             [
                 {

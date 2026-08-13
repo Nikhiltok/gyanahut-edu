@@ -16,8 +16,10 @@ interface PaginatedResponse<T> {
   results: T[];
 }
 
-export async function getBookmarks() {
-  const { data } = await api.get<PaginatedResponse<Bookmark>>("/bookmarks/", { params: { page_size: "200" } });
+export async function getBookmarks(examIds?: string[]) {
+  const { data } = await api.get<PaginatedResponse<Bookmark>>("/bookmarks/", {
+    params: { page_size: "200", ...(examIds?.length ? { exam: examIds } : undefined) },
+  });
   return data.results;
 }
 

@@ -9,10 +9,10 @@ export interface LeaderboardEntry {
   accuracy: number;
 }
 
-export async function getGlobalLeaderboard(period?: "weekly" | "monthly") {
+export async function getGlobalLeaderboard(period?: "weekly" | "monthly", examIds?: string[]) {
   const { data } = await api.get<{ success: true; message: string; data: LeaderboardEntry[] }>(
     "/leaderboard/global/",
-    { params: period ? { period } : undefined },
+    { params: { ...(period ? { period } : undefined), ...(examIds?.length ? { exam: examIds } : undefined) } },
   );
   return data.data;
 }

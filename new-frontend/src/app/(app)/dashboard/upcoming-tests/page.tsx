@@ -2,14 +2,20 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
+import { useSelector } from "react-redux";
 
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { getUpcomingTests } from "@/services/tests.service";
+import type { RootState } from "@/store";
 
 export default function UpcomingTestsPage() {
-  const { data: tests, isLoading } = useQuery({ queryKey: ["upcoming-tests"], queryFn: getUpcomingTests });
+  const selectedExamIds = useSelector((state: RootState) => state.examFilter.selectedExamIds);
+  const { data: tests, isLoading } = useQuery({
+    queryKey: ["upcoming-tests", selectedExamIds],
+    queryFn: () => getUpcomingTests(selectedExamIds),
+  });
   const [subjectFilter, setSubjectFilter] = useState<string>("All subjects");
   const [search, setSearch] = useState("");
 

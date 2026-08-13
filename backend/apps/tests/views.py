@@ -13,6 +13,7 @@ from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
 from apps.attempts.models import StudentAnswer, TestAttempt
 from apps.core.permissions import IsAdminOrSuperAdmin
 from apps.core.responses import error_response, success_response
+from apps.core.utils import get_exam_ids_filter
 from apps.core.viewsets import AdminModelViewSet
 from apps.exams.models import Chapter, Exam, Subject, Topic
 from apps.questions.models import Question, QuestionOption
@@ -272,6 +273,9 @@ class UpcomingTestsView(APIView):
         tests = Test.objects.filter(status=Test.Status.SCHEDULED, start_time__gt=timezone.now()).exclude(
             **SELF_PRACTICE_FILTER
         )
+        exam_ids = get_exam_ids_filter(request)
+        if exam_ids:
+            tests = tests.filter(exam_id__in=exam_ids)
         return success_response(TestSerializer(tests, many=True, context={"request": request}).data)
 
 
@@ -280,6 +284,9 @@ class LiveTestsView(APIView):
 
     def get(self, request):
         tests = Test.objects.filter(status=Test.Status.LIVE).exclude(**SELF_PRACTICE_FILTER)
+        exam_ids = get_exam_ids_filter(request)
+        if exam_ids:
+            tests = tests.filter(exam_id__in=exam_ids)
         return success_response(TestSerializer(tests, many=True, context={"request": request}).data)
 
 

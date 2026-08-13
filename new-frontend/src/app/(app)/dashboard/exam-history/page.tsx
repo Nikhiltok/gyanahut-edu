@@ -3,11 +3,13 @@
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 import { Card } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { getMyAttempts } from "@/services/attempts.service";
+import type { RootState } from "@/store";
 
 type Filter = "all" | "practice" | "mock";
 
@@ -19,9 +21,10 @@ const TABS: { value: Filter; label: string }[] = [
 
 export default function ExamHistoryPage() {
   const [filter, setFilter] = useState<Filter>("all");
+  const selectedExamIds = useSelector((state: RootState) => state.examFilter.selectedExamIds);
   const { data: attempts, isLoading } = useQuery({
-    queryKey: ["my-attempts", filter],
-    queryFn: () => getMyAttempts(filter === "all" ? undefined : filter),
+    queryKey: ["my-attempts", filter, selectedExamIds],
+    queryFn: () => getMyAttempts(filter === "all" ? undefined : filter, selectedExamIds),
   });
 
   return (

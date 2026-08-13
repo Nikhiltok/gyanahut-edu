@@ -6,6 +6,7 @@ from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
 
 from apps.core.permissions import IsAdminOrSuperAdmin
 from apps.core.responses import error_response, success_response
+from apps.core.utils import get_exam_ids_filter
 from apps.core.viewsets import AdminModelViewSet, ParentFilteredReadOnlyViewSet
 from apps.exams.models import Topic
 
@@ -163,7 +164,11 @@ class BookmarkViewSet(ModelViewSet):
     http_method_names = ["get", "post", "delete"]
 
     def get_queryset(self):
-        return Bookmark.objects.filter(student=self.request.user).select_related("question", "question__topic")
+        queryset = Bookmark.objects.filter(student=self.request.user).select_related("question", "question__topic")
+        exam_ids = get_exam_ids_filter(self.request)
+        if exam_ids:
+            queryset = queryset.filter(question__topic__chapter__subject__exam_id__in=exam_ids)
+        return queryset
 
 
 class DifficultMarkViewSet(ModelViewSet):

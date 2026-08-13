@@ -18,13 +18,17 @@ export async function generatePracticeTest(payload: GeneratePracticePayload) {
   return data.data;
 }
 
-export async function getLiveTests() {
-  const { data } = await api.get<ApiSuccess<Test[]>>("/tests/live/");
+export async function getLiveTests(examIds?: string[]) {
+  const { data } = await api.get<ApiSuccess<Test[]>>("/tests/live/", {
+    params: examIds?.length ? { exam: examIds } : undefined,
+  });
   return data.data;
 }
 
-export async function getUpcomingTests() {
-  const { data } = await api.get<ApiSuccess<Test[]>>("/tests/upcoming/");
+export async function getUpcomingTests(examIds?: string[]) {
+  const { data } = await api.get<ApiSuccess<Test[]>>("/tests/upcoming/", {
+    params: examIds?.length ? { exam: examIds } : undefined,
+  });
   return data.data;
 }
 

@@ -2,11 +2,13 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { getProfile } from "@/services/auth.service";
 import { getGlobalLeaderboard } from "@/services/leaderboard.service";
+import type { RootState } from "@/store";
 
 type Period = undefined | "weekly" | "monthly";
 
@@ -20,10 +22,11 @@ const MEDAL_COLORS = ["#FBBF24", "#C0C0C0", "#CD7F32"];
 
 export default function RankingPage() {
   const [period, setPeriod] = useState<Period>(undefined);
+  const selectedExamIds = useSelector((state: RootState) => state.examFilter.selectedExamIds);
   const { data: profile } = useQuery({ queryKey: ["profile"], queryFn: getProfile, retry: false });
   const { data: entries, isLoading } = useQuery({
-    queryKey: ["global-leaderboard", period],
-    queryFn: () => getGlobalLeaderboard(period),
+    queryKey: ["global-leaderboard", period, selectedExamIds],
+    queryFn: () => getGlobalLeaderboard(period, selectedExamIds),
   });
 
   const myEntry = entries?.find((entry) => entry.student === profile?.id);

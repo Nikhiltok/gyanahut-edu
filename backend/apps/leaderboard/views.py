@@ -7,6 +7,7 @@ from rest_framework.views import APIView
 
 from apps.attempts.models import TestAttempt
 from apps.core.responses import success_response
+from apps.core.utils import get_exam_ids_filter
 
 from .models import Leaderboard
 from .serializers import LeaderboardSerializer
@@ -47,6 +48,9 @@ class GlobalLeaderboardView(APIView):
     def get(self, request):
         period = request.query_params.get("period")
         queryset = TestAttempt.objects.filter(submitted_at__isnull=False)
+        exam_ids = get_exam_ids_filter(request)
+        if exam_ids:
+            queryset = queryset.filter(test__exam_id__in=exam_ids)
         return success_response(compute_period_ranking(queryset, period))
 
 

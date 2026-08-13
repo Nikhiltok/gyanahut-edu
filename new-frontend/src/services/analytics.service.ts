@@ -26,16 +26,18 @@ export interface PerformancePoint {
   accuracy: number;
 }
 
-export async function getDashboardStats() {
+export async function getDashboardStats(examIds?: string[]) {
   const { data } = await api.get<{ success: true; message: string; data: DashboardStats }>(
     "/analytics/dashboard/",
+    { params: examIds?.length ? { exam: examIds } : undefined },
   );
   return data.data;
 }
 
-export async function getPerformanceGraph() {
+export async function getPerformanceGraph(examIds?: string[]) {
   const { data } = await api.get<{ success: true; message: string; data: PerformancePoint[] }>(
     "/analytics/performance/",
+    { params: examIds?.length ? { exam: examIds } : undefined },
   );
   return data.data;
 }

@@ -3,14 +3,20 @@
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { useSelector } from "react-redux";
 
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { getLiveTests } from "@/services/tests.service";
+import type { RootState } from "@/store";
 
 export default function LiveTestsPage() {
-  const { data: tests, isLoading } = useQuery({ queryKey: ["live-tests"], queryFn: getLiveTests });
+  const selectedExamIds = useSelector((state: RootState) => state.examFilter.selectedExamIds);
+  const { data: tests, isLoading } = useQuery({
+    queryKey: ["live-tests", selectedExamIds],
+    queryFn: () => getLiveTests(selectedExamIds),
+  });
   const [subjectFilter, setSubjectFilter] = useState<string>("All subjects");
   const [search, setSearch] = useState("");
 

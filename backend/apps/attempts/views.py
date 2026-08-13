@@ -3,6 +3,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 
 from apps.core.responses import error_response, success_response
+from apps.core.utils import get_exam_ids_filter
 from apps.questions.models import DifficultMark
 from apps.questions.serializers import QuestionSerializer
 
@@ -24,6 +25,9 @@ class MyAttemptsView(APIView):
             attempts = attempts.filter(test__test_type="PRACTICE", test__created_by__role="STUDENT")
         elif type_param == "mock":
             attempts = attempts.exclude(test__test_type="PRACTICE", test__created_by__role="STUDENT")
+        exam_ids = get_exam_ids_filter(request)
+        if exam_ids:
+            attempts = attempts.filter(test__exam_id__in=exam_ids)
         return success_response(TestAttemptSummarySerializer(attempts, many=True).data)
 
 
@@ -68,6 +72,9 @@ class WrongQuestionsView(APIView):
             .select_related("question", "question__topic")
             .order_by("-created_at")
         )
+        exam_ids = get_exam_ids_filter(request)
+        if exam_ids:
+            wrong_answers = wrong_answers.filter(question__topic__chapter__subject__exam_id__in=exam_ids)
         questions = [answer.question for answer in wrong_answers]
         return success_response(QuestionSerializer(questions, many=True, context={"request": request}).data)
 
@@ -81,6 +88,8 @@ class DifficultQuestionsView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
+        exam_ids = get_exam_ids_filter(request)
+
         answers = (
             StudentAnswer.objects.filter(
                 attempt__student=request.user, question__difficulty="HARD"
@@ -89,6 +98,8 @@ class DifficultQuestionsView(APIView):
             .select_related("question", "question__topic")
             .order_by("-created_at")
         )
+        if exam_ids:
+            answers = answers.filter(question__topic__chapter__subject__exam_id__in=exam_ids)
         seen = set()
         questions = []
         for answer in answers:
@@ -102,6 +113,8 @@ class DifficultQuestionsView(APIView):
             .select_related("question", "question__topic")
             .order_by("-created_at")
         )
+        if exam_ids:
+            marks = marks.filter(question__topic__chapter__subject__exam_id__in=exam_ids)
         for mark in marks:
             if mark.question_id in seen:
                 continue

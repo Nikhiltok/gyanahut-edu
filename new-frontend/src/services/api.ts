@@ -3,9 +3,30 @@ import axios, { type AxiosError, type InternalAxiosRequestConfig } from "axios";
 import { API_BASE_URL } from "@/constants/config";
 import { clearTokens, getAccessToken, getRefreshToken, setAccessToken } from "@/utils/token-storage";
 
+// Axios's default paramsSerializer encodes arrays as `exam[0]=x&exam[1]=y`,
+// which DRF's `request.query_params.getlist("exam")` does not understand.
+// Serialize arrays as repeated keys (`exam=x&exam=y`) instead, which is what
+// Django/DRF expects, and drop null/undefined values entirely.
+function serializeParams(params: Record<string, unknown>): string {
+  const search = new URLSearchParams();
+  Object.entries(params).forEach(([key, value]) => {
+    if (value === undefined || value === null) return;
+    if (Array.isArray(value)) {
+      value.forEach((item) => {
+        if (item === undefined || item === null) return;
+        search.append(key, String(item));
+      });
+      return;
+    }
+    search.append(key, String(value));
+  });
+  return search.toString();
+}
+
 export const api = axios.create({
   baseURL: API_BASE_URL,
   headers: { "Content-Type": "application/json" },
+  paramsSerializer: serializeParams,
 });
 
 api.interceptors.request.use((config) => {

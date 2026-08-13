@@ -17,10 +17,10 @@ export interface AttemptSummary {
   submitted_at: string;
 }
 
-export async function getMyAttempts(type?: "practice" | "mock") {
+export async function getMyAttempts(type?: "practice" | "mock", examIds?: string[]) {
   const { data } = await api.get<{ success: true; message: string; data: AttemptSummary[] }>(
     "/results/my-attempts/",
-    { params: type ? { type } : undefined },
+    { params: { ...(type ? { type } : undefined), ...(examIds?.length ? { exam: examIds } : undefined) } },
   );
   return data.data;
 }
@@ -32,16 +32,18 @@ export async function getResult(attemptId: string) {
   return data.data;
 }
 
-export async function getWrongQuestions() {
+export async function getWrongQuestions(examIds?: string[]) {
   const { data } = await api.get<{ success: true; message: string; data: RevisionQuestion[] }>(
     "/revision/wrong/",
+    { params: examIds?.length ? { exam: examIds } : undefined },
   );
   return data.data;
 }
 
-export async function getDifficultQuestions() {
+export async function getDifficultQuestions(examIds?: string[]) {
   const { data } = await api.get<{ success: true; message: string; data: RevisionQuestion[] }>(
     "/revision/difficult/",
+    { params: examIds?.length ? { exam: examIds } : undefined },
   );
   return data.data;
 }

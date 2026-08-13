@@ -40,7 +40,7 @@ function Toggle({ checked, onChange }: { checked: boolean; onChange: (value: boo
       onClick={() => onChange(!checked)}
       className={cn(
         "relative h-6 w-11 shrink-0 rounded-full transition-colors",
-        checked ? "bg-gold" : "bg-border",
+        checked ? "bg-gold" : "bg-muted-fg/40",
       )}
     >
       <span

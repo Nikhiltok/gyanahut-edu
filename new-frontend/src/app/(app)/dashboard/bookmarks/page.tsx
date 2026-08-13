@@ -2,14 +2,20 @@
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
+import { useSelector } from "react-redux";
 
 import { Card } from "@/components/ui/card";
 import { getErrorMessage } from "@/lib/api-error";
 import { getBookmarks, removeBookmark } from "@/services/bookmarks.service";
+import type { RootState } from "@/store";
 
 export default function BookmarksPage() {
   const queryClient = useQueryClient();
-  const { data: bookmarks, isLoading } = useQuery({ queryKey: ["bookmarks"], queryFn: getBookmarks });
+  const selectedExamIds = useSelector((state: RootState) => state.examFilter.selectedExamIds);
+  const { data: bookmarks, isLoading } = useQuery({
+    queryKey: ["bookmarks", selectedExamIds],
+    queryFn: () => getBookmarks(selectedExamIds),
+  });
 
   const removeMutation = useMutation({
     mutationFn: removeBookmark,

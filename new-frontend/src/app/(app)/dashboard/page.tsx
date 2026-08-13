@@ -3,6 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import { Bar, BarChart, ResponsiveContainer } from "recharts";
+import { useSelector } from "react-redux";
 
 import { Card } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
@@ -10,6 +11,7 @@ import { getDashboardStats, getPerformanceGraph } from "@/services/analytics.ser
 import { getMyAttempts } from "@/services/attempts.service";
 import { getProfile } from "@/services/auth.service";
 import { getGlobalLeaderboard } from "@/services/leaderboard.service";
+import type { RootState } from "@/store";
 
 function StatTile({ label, value, delta }: { label: string; value: string; delta?: string }) {
   return (
@@ -24,13 +26,23 @@ function StatTile({ label, value, delta }: { label: string; value: string; delta
 }
 
 export default function DashboardOverviewPage() {
+  const selectedExamIds = useSelector((state: RootState) => state.examFilter.selectedExamIds);
   const { data: profile } = useQuery({ queryKey: ["profile"], queryFn: getProfile, retry: false });
-  const { data: stats } = useQuery({ queryKey: ["dashboard-stats"], queryFn: getDashboardStats });
-  const { data: performance } = useQuery({ queryKey: ["performance-graph"], queryFn: getPerformanceGraph });
-  const { data: attempts } = useQuery({ queryKey: ["my-attempts"], queryFn: () => getMyAttempts() });
+  const { data: stats } = useQuery({
+    queryKey: ["dashboard-stats", selectedExamIds],
+    queryFn: () => getDashboardStats(selectedExamIds),
+  });
+  const { data: performance } = useQuery({
+    queryKey: ["performance-graph", selectedExamIds],
+    queryFn: () => getPerformanceGraph(selectedExamIds),
+  });
+  const { data: attempts } = useQuery({
+    queryKey: ["my-attempts", undefined, selectedExamIds],
+    queryFn: () => getMyAttempts(undefined, selectedExamIds),
+  });
   const { data: leaderboard } = useQuery({
-    queryKey: ["global-leaderboard"],
-    queryFn: () => getGlobalLeaderboard(),
+    queryKey: ["global-leaderboard", undefined, selectedExamIds],
+    queryFn: () => getGlobalLeaderboard(undefined, selectedExamIds),
   });
 
   const myRank = leaderboard?.find((entry) => entry.student === profile?.id)?.rank;
