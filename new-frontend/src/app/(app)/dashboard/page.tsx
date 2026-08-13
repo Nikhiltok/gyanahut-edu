@@ -1,6 +1,7 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { Bar, BarChart, ResponsiveContainer } from "recharts";
 import { useSelector } from "react-redux";
@@ -26,6 +27,7 @@ function StatTile({ label, value, delta }: { label: string; value: string; delta
 }
 
 export default function DashboardOverviewPage() {
+  const t = useTranslations("dashboard.overview");
   const selectedExamIds = useSelector((state: RootState) => state.examFilter.selectedExamIds);
   const { data: profile } = useQuery({ queryKey: ["profile"], queryFn: getProfile, retry: false });
   const { data: stats } = useQuery({
@@ -58,22 +60,22 @@ export default function DashboardOverviewPage() {
       <div className="flex items-center justify-between rounded-xl bg-gold px-7 py-6">
         <div>
           <h2 className="font-heading text-lg font-semibold text-gold-ink">
-            Welcome back{profile ? `, ${profile.first_name}` : ""}
+            {profile ? t("welcomeBack", { name: profile.first_name }) : t("welcomeBack", { name: "" })}
           </h2>
           <p className="mt-1 text-xs text-gold-ink/75">
             {targetExams ? `Target: ${targetExams}` : "Set your target exams from your profile."}
           </p>
         </div>
         <Link href="/dashboard/infinite-test" className={buttonVariants({ variant: "outline" })}>
-          Start practice
+          {t("startPractice")}
         </Link>
       </div>
 
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-        <StatTile label="Tests attempted" value={String(stats?.tests_attempted ?? "—")} delta="+12%" />
-        <StatTile label="Avg accuracy" value={stats ? `${stats.accuracy}%` : "—"} />
-        <StatTile label="Rank" value={myRank ? `#${myRank}` : "Unranked"} />
-        <StatTile label="Day streak" value={String(stats?.day_streak ?? "—")} />
+        <StatTile label={t("testsAttempted")} value={String(stats?.tests_attempted ?? "—")} delta="+12%" />
+        <StatTile label={t("avgAccuracy")} value={stats ? `${stats.accuracy}%` : "—"} />
+        <StatTile label={t("rank")} value={myRank ? `#${myRank}` : "Unranked"} />
+        <StatTile label={t("dayStreak")} value={String(stats?.day_streak ?? "—")} />
       </div>
 
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-[1.6fr_1fr]">
@@ -100,7 +102,7 @@ export default function DashboardOverviewPage() {
           )}
 
           <Card className="p-5">
-            <h3 className="font-heading text-sm font-semibold text-fg">Recent activity</h3>
+            <h3 className="font-heading text-sm font-semibold text-fg">{t("recentActivity")}</h3>
             <div className="mt-4 space-y-3">
               {(attempts ?? []).slice(0, 3).map((attempt) => (
                 <div key={attempt.id} className="flex items-center justify-between text-xs">
@@ -108,7 +110,7 @@ export default function DashboardOverviewPage() {
                   <span className="font-medium text-accent-fg">{Math.round(attempt.accuracy)}%</span>
                 </div>
               ))}
-              {attempts?.length === 0 && <p className="text-xs text-muted-fg">No attempts yet.</p>}
+              {attempts?.length === 0 && <p className="text-xs text-muted-fg">{t("noAttempts")}</p>}
             </div>
           </Card>
         </div>

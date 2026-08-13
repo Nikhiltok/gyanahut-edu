@@ -1,0 +1,76 @@
+{
+  "auth": {
+    "login": {
+      "title": "Login",
+      "subtitle": "Enter your details to resume your preparation.",
+      "identifierLabel": "Email or phone number",
+      "identifierPlaceholder": "name@example.com or 98xxxxxxxx",
+      "passwordLabel": "Password",
+      "forgotPassword": "Forgot password?",
+      "submit": "Login",
+      "submitting": "Logging in...",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Create an account"
+    },
+    "register": {
+      "title": "Create your account",
+      "subtitle": "Start practicing for your target exams today."
+    }
+  },
+  "dashboard": {
+    "overview": {
+      "title": "Overview",
+      "welcomeBack": "Welcome back, {name}",
+      "startPractice": "Start practice",
+      "testsAttempted": "Tests attempted",
+      "avgAccuracy": "Avg accuracy",
+      "rank": "Rank",
+      "dayStreak": "Day streak",
+      "recentActivity": "Recent activity",
+      "noAttempts": "No attempts yet."
+    },
+    "nav": {
+      "overview": "Overview",
+      "infiniteTest": "Infinite test",
+      "liveTests": "Live tests",
+      "upcomingTests": "Upcoming tests",
+      "examHistory": "Exam history",
+      "bookmarks": "Bookmarks",
+      "wrongQuestions": "Wrong questions",
+      "difficultQuestions": "Difficult questions",
+      "ranking": "Ranking",
+      "wallet": "Wallet",
+      "profile": "Profile",
+      "settings": "Settings",
+      "logout": "Logout"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "title": "Appearance",
+      "subtitle": "Choose how Gyanahut Edu looks on this device.",
+      "darkMode": "Dark mode",
+      "darkModeDescription": "Switch between light and dark theme."
+    },
+    "language": {
+      "title": "Language",
+      "subtitle": "Choose your preferred language for the app.",
+      "label": "App language"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "subtitle": "Control what you get notified about.",
+      "examReminders": "Exam reminders",
+      "examRemindersDescription": "Upcoming and live test alerts.",
+      "resultAlerts": "Result alerts",
+      "resultAlertsDescription": "When your test results are ready.",
+      "promotions": "Offers and promotions",
+      "promotionsDescription": "Recharge deals and new features."
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel"
+  }
+}

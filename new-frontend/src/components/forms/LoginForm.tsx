@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -12,6 +13,7 @@ import { getErrorMessage } from "@/lib/api-error";
 import { login, logout } from "@/services/auth.service";
 
 export function LoginForm() {
+  const t = useTranslations("auth.login");
   const router = useRouter();
   const searchParams = useSearchParams();
   const [identifier, setIdentifier] = useState("");
@@ -45,15 +47,15 @@ export function LoginForm() {
 
   return (
     <div className="flex h-full flex-col justify-center">
-      <h1 className="font-heading text-[22px] font-semibold text-fg">Login</h1>
-      <p className="mt-1.5 text-[12.5px] text-muted-fg">Enter your details to resume your preparation.</p>
+      <h1 className="font-heading text-[22px] font-semibold text-fg">{t("title")}</h1>
+      <p className="mt-1.5 text-[12.5px] text-muted-fg">{t("subtitle")}</p>
 
       <form className="mt-7 space-y-5" onSubmit={handleSubmit}>
         <div>
-          <Label htmlFor="identifier">Email or phone number</Label>
+          <Label htmlFor="identifier">{t("identifierLabel")}</Label>
           <Input
             id="identifier"
-            placeholder="name@example.com or 98xxxxxxxx"
+            placeholder={t("identifierPlaceholder")}
             value={identifier}
             onChange={(event) => setIdentifier(event.target.value)}
             required
@@ -63,7 +65,7 @@ export function LoginForm() {
         <div>
           <div className="flex items-center justify-between">
             <Label htmlFor="password" className="mb-1.5">
-              Password
+              {t("passwordLabel")}
             </Label>
           </div>
           <Input
@@ -76,19 +78,19 @@ export function LoginForm() {
           />
           <div className="mt-2 text-right">
             <Link href="/forgot-password" className="text-xs font-medium text-accent-fg hover:underline">
-              Forgot password?
+              {t("forgotPassword")}
             </Link>
           </div>
         </div>
 
         <Button type="submit" variant="primary" size="lg" className="w-full" disabled={isSubmitting}>
-          {isSubmitting ? "Logging in..." : "Login"}
+          {isSubmitting ? t("submitting") : t("submit")}
         </Button>
 
         <p className="text-center text-[12.5px] text-muted-fg">
-          Don&apos;t have an account?{" "}
+          {t("noAccount")}{" "}
           <Link href="/register" className="font-medium text-accent-fg hover:underline">
-            Create an account
+            {t("createAccount")}
           </Link>
         </p>
       </form>

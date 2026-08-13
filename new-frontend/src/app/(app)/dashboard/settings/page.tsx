@@ -1,9 +1,11 @@
 "use client";
 
 import { Moon, Sun } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
+import { LanguageSelect } from "@/components/common/LanguageSelect";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -54,6 +56,7 @@ function Toggle({ checked, onChange }: { checked: boolean; onChange: (value: boo
 }
 
 export default function SettingsPage() {
+  const t = useTranslations("settings");
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [prefs, setPrefs] = useState<NotificationPrefs>(DEFAULT_PREFS);
@@ -74,8 +77,8 @@ export default function SettingsPage() {
   return (
     <div className="mx-auto max-w-2xl space-y-5">
       <Card className="p-6">
-        <h2 className="font-heading text-base font-semibold text-fg">Appearance</h2>
-        <p className="mt-1 text-[12.5px] text-muted-fg">Choose how Gyanahut Edu looks on this device.</p>
+        <h2 className="font-heading text-base font-semibold text-fg">{t("appearance.title")}</h2>
+        <p className="mt-1 text-[12.5px] text-muted-fg">{t("appearance.subtitle")}</p>
 
         <div className="mt-5 flex items-center justify-between rounded-lg border border-border p-4">
           <div className="flex items-center gap-3">
@@ -83,8 +86,8 @@ export default function SettingsPage() {
               {isDark ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
             </span>
             <div>
-              <p className="text-[13px] font-medium text-fg">Dark mode</p>
-              <p className="text-[11.5px] text-muted-fg">Switch between light and dark theme.</p>
+              <p className="text-[13px] font-medium text-fg">{t("appearance.darkMode")}</p>
+              <p className="text-[11.5px] text-muted-fg">{t("appearance.darkModeDescription")}</p>
             </div>
           </div>
           {mounted && (
@@ -94,14 +97,24 @@ export default function SettingsPage() {
       </Card>
 
       <Card className="p-6">
-        <h2 className="font-heading text-base font-semibold text-fg">Notifications</h2>
-        <p className="mt-1 text-[12.5px] text-muted-fg">Control what you get notified about.</p>
+        <h2 className="font-heading text-base font-semibold text-fg">{t("language.title")}</h2>
+        <p className="mt-1 text-[12.5px] text-muted-fg">{t("language.subtitle")}</p>
+
+        <div className="mt-5 flex items-center justify-between rounded-lg border border-border p-4">
+          <p className="text-[13px] font-medium text-fg">{t("language.label")}</p>
+          <LanguageSelect />
+        </div>
+      </Card>
+
+      <Card className="p-6">
+        <h2 className="font-heading text-base font-semibold text-fg">{t("notifications.title")}</h2>
+        <p className="mt-1 text-[12.5px] text-muted-fg">{t("notifications.subtitle")}</p>
 
         <div className="mt-5 space-y-3">
           <div className="flex items-center justify-between rounded-lg border border-border p-4">
             <div>
-              <p className="text-[13px] font-medium text-fg">Exam reminders</p>
-              <p className="text-[11.5px] text-muted-fg">Upcoming and live test alerts.</p>
+              <p className="text-[13px] font-medium text-fg">{t("notifications.examReminders")}</p>
+              <p className="text-[11.5px] text-muted-fg">{t("notifications.examRemindersDescription")}</p>
             </div>
             <Toggle
               checked={prefs.examReminders}
@@ -111,16 +124,16 @@ export default function SettingsPage() {
 
           <div className="flex items-center justify-between rounded-lg border border-border p-4">
             <div>
-              <p className="text-[13px] font-medium text-fg">Result alerts</p>
-              <p className="text-[11.5px] text-muted-fg">When your test results are ready.</p>
+              <p className="text-[13px] font-medium text-fg">{t("notifications.resultAlerts")}</p>
+              <p className="text-[11.5px] text-muted-fg">{t("notifications.resultAlertsDescription")}</p>
             </div>
             <Toggle checked={prefs.resultAlerts} onChange={(value) => updatePref("resultAlerts", value)} />
           </div>
 
           <div className="flex items-center justify-between rounded-lg border border-border p-4">
             <div>
-              <p className="text-[13px] font-medium text-fg">Offers and promotions</p>
-              <p className="text-[11.5px] text-muted-fg">Recharge deals and new features.</p>
+              <p className="text-[13px] font-medium text-fg">{t("notifications.promotions")}</p>
+              <p className="text-[11.5px] text-muted-fg">{t("notifications.promotionsDescription")}</p>
             </div>
             <Toggle checked={prefs.promotions} onChange={(value) => updatePref("promotions", value)} />
           </div>

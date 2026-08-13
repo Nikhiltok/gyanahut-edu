@@ -1,0 +1,76 @@
+{
+  "auth": {
+    "login": {
+      "title": "लॉगिन",
+      "subtitle": "अपनी तैयारी जारी रखने के लिए अपना विवरण दर्ज करें।",
+      "identifierLabel": "ईमेल या फ़ोन नंबर",
+      "identifierPlaceholder": "name@example.com या 98xxxxxxxx",
+      "passwordLabel": "पासवर्ड",
+      "forgotPassword": "पासवर्ड भूल गए?",
+      "submit": "लॉगिन करें",
+      "submitting": "लॉगिन हो रहा है...",
+      "noAccount": "खाता नहीं है?",
+      "createAccount": "खाता बनाएं"
+    },
+    "register": {
+      "title": "अपना खाता बनाएं",
+      "subtitle": "आज ही अपनी लक्षित परीक्षाओं के लिए अभ्यास शुरू करें।"
+    }
+  },
+  "dashboard": {
+    "overview": {
+      "title": "अवलोकन",
+      "welcomeBack": "वापसी पर स्वागत है, {name}",
+      "startPractice": "अभ्यास शुरू करें",
+      "testsAttempted": "दिए गए टेस्ट",
+      "avgAccuracy": "औसत सटीकता",
+      "rank": "रैंक",
+      "dayStreak": "दिन की स्ट्रीक",
+      "recentActivity": "हाल की गतिविधि",
+      "noAttempts": "अभी तक कोई प्रयास नहीं।"
+    },
+    "nav": {
+      "overview": "अवलोकन",
+      "infiniteTest": "अनंत टेस्ट",
+      "liveTests": "लाइव टेस्ट",
+      "upcomingTests": "आगामी टेस्ट",
+      "examHistory": "परीक्षा इतिहास",
+      "bookmarks": "बुकमार्क",
+      "wrongQuestions": "गलत प्रश्न",
+      "difficultQuestions": "कठिन प्रश्न",
+      "ranking": "रैंकिंग",
+      "wallet": "वॉलेट",
+      "profile": "प्रोफ़ाइल",
+      "settings": "सेटिंग्स",
+      "logout": "लॉगआउट"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "title": "दिखावट",
+      "subtitle": "चुनें कि Gyanahut Edu इस डिवाइस पर कैसा दिखे।",
+      "darkMode": "डार्क मोड",
+      "darkModeDescription": "लाइट और डार्क थीम के बीच स्विच करें।"
+    },
+    "language": {
+      "title": "भाषा",
+      "subtitle": "ऐप के लिए अपनी पसंदीदा भाषा चुनें।",
+      "label": "ऐप की भाषा"
+    },
+    "notifications": {
+      "title": "सूचनाएं",
+      "subtitle": "नियंत्रित करें कि आपको किस बारे में सूचित किया जाए।",
+      "examReminders": "परीक्षा अनुस्मारक",
+      "examRemindersDescription": "आगामी और लाइव टेस्ट अलर्ट।",
+      "resultAlerts": "परिणाम अलर्ट",
+      "resultAlertsDescription": "जब आपके टेस्ट के परिणाम तैयार हों।",
+      "promotions": "ऑफर और प्रचार",
+      "promotionsDescription": "रिचार्ज डील और नई सुविधाएं।"
+    }
+  },
+  "common": {
+    "loading": "लोड हो रहा है...",
+    "save": "सहेजें",
+    "cancel": "रद्द करें"
+  }
+}
